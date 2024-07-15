@@ -3,8 +3,7 @@ from django.contrib.admin import TabularInline
 from django.urls import reverse
 from django.utils.html import format_html
 
-from breaks.models import replacements, dicts, breaks
-from breaks.models.replacements import GroupInfo
+from breaks.models import breaks, dicts, replacements
 
 
 ##############################
@@ -56,4 +55,3 @@ class BreakAdmin(admin.ModelAdmin):
             'admin:breaks_replacement_change', args=[obj.replacement.id]
         )
         return format_html('<a href="{}">{}</a>', link, obj.replacement)
-

@@ -25,7 +25,7 @@ class GroupInfo(models.Model):
         verbose_name_plural = 'Параметры обеденных перерывов'
 
     def __str__(self):
-        return f'Break Info'
+        return f'{self.group} группа'
 
 
 class Replacement(InfoMixin):
@@ -58,6 +58,7 @@ class Replacement(InfoMixin):
 
     # def free_breaks_available(self, break_start, break_end):
     #     self.breaks
+
 
 class ReplacementMember(models.Model):
     member = models.ForeignKey(

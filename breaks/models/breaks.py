@@ -24,7 +24,7 @@ class Break(models.Model):
 
     class Meta:
         verbose_name = 'Обеденный перерыв'
-        verbose_name_plural = 'Обеденный перерывы'
+        verbose_name_plural = 'Обеденные перерывы'
         ordering = ('-replacement__date', 'break_start')
 
     def __str__(self):
